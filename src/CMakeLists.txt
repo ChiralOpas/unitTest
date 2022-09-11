@@ -11,8 +11,7 @@ file(GLOB LIB_SOURCES "*.cpp" "*.h")
 list(FILTER LIB_SOURCES EXCLUDE REGEX ".*main\\.cpp$")
 
 set(LIBRARY_NAME applibrary)
-add_library(${LIBRARY_NAME} STATIC)
-target_sources(${LIBRARY_NAME} PUBLIC ${LIB_SOURCES})
+add_library(${LIBRARY_NAME} STATIC ${LIB_SOURCES})
 set_target_properties(${LIBRARY_NAME} PROPERTIES FOLDER Libraries)
 
 
