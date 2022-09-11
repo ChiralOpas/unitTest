@@ -11,6 +11,11 @@ target_link_libraries(${PROJECT_NAME} applibrary)
 
 # define tests
 add_test(
-  NAME ${PROJECT_NAME}
-  COMMAND $<TARGET_FILE:${PROJECT_NAME}>
+  NAME sum.valid.passes
+  COMMAND $<TARGET_FILE:tests> 1
+  )
+
+add_test(
+  NAME sum.invalid.fails
+  COMMAND $<TARGET_FILE:tests> 2
   )
